@@ -401,10 +401,12 @@
   color: #78350f;
 }
 
-.tier-badge.silver {
-  background: linear-gradient(135deg, #9ca3af, #6b7280);
-  color: #374151;
+.tier-badge.media {
+  background: linear-gradient(135deg, #3B82F6, #2563EB);
+  color: #FFFFFF;
 }
+
+
 
 .sponsor-grid {
   display: grid;

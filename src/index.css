@@ -37,6 +37,12 @@ body {
   display: flex;
   flex-direction: column;
 }
+.youtube-icon {
+  color: #FF0000; /* YouTube red */
+  margin-left: 5px; /* optional spacing from the name */
+  vertical-align: middle; /* align with text */
+  font-size: 1.2em; /* optional size adjustment */
+}
 
 .main-content {
   flex: 1;

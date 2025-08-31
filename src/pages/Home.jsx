@@ -5,17 +5,17 @@ const Home = () => {
   const featuredNews = [
     {
       title: "Valorant Champions 2025 Announced",
-      image: "https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg",
+      image: "https://cdn.arstechnica.net/wp-content/uploads/2020/04/valorant-listing-scaled.jpg",
       excerpt: "The biggest Valorant tournament of the year is coming with a $2M prize pool."
     },
     {
       title: "Mobile Legends World Championship",
-      image: "https://images.pexels.com/photos/1293261/pexels-photo-1293261.jpeg",
+      image: "https://wallpapers.com/images/featured/mobile-legends-v0u46grjbqc6h9ga.jpg",
       excerpt: "16 teams compete for the ultimate MLBB crown in this year's championship."
     },
     {
       title: "CS2 Major Update Released",
-      image: "https://images.pexels.com/photos/21696/pexels-photo.jpg",
+      image: "https://www.nme.com/wp-content/uploads/2023/03/Counter-Strike-2-Dust-2-Smokes.jpg",
       excerpt: "New maps, weapons, and gameplay mechanics arrive in the latest update."
     }
   ];

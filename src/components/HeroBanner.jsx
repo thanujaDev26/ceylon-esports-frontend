@@ -3,7 +3,7 @@ const HeroBanner = () => {
     <section className="hero-banner">
       <div className="hero-content">
         <h1 className="hero-title">
-          Welcome to <span className="gradient-text">GameHub</span>
+          Welcome to <span className="gradient-text">Ceylon eSports</span>
         </h1>
         <p className="hero-subtitle">
           Your ultimate destination for esports news, tournaments, and gaming community

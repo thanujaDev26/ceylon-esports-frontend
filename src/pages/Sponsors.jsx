@@ -1,29 +1,30 @@
 import Card from '../components/Card';
-
+import { FaYoutube } from 'react-icons/fa';
+import '../index.css'
 const Sponsors = () => {
   const sponsorTiers = [
     {
       tier: "Platinum",
       sponsors: [
-        { name: "TechGiant Corp", logo: "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg" },
-        { name: "Gaming Pro", logo: "https://images.pexels.com/photos/159868/computer-mouse-wireless-computer-silver-159868.jpeg" }
+        { name: "SLT Mobitel", logo: "https://yt3.googleusercontent.com/coOC-_83XD6gCx4vOWfs_mOIV3xqDNf2ufPzOC_DhPBbNUVPCoZsaB3f421bq7NN6_Kpf0Y3Kw=s900-c-k-c0x00ffffff-no-rj" },
+        { name: "NANOTEK Computer Solutions", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjiqQieKfS-RLsZgOmiYt62UJkJaKUbwKBiA&s" }
       ]
     },
     {
       tier: "Gold",
       sponsors: [
-        { name: "StreamCorp", logo: "https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg" },
-        { name: "GamerHub", logo: "https://images.pexels.com/photos/1293261/pexels-photo-1293261.jpeg" },
-        { name: "EsportsTech", logo: "https://images.pexels.com/photos/21696/pexels-photo.jpg" }
+        { name: "Perera & Sons", logo: "https://pereraandsons.com/assets/img/logo.svg" },
+        { name: "Dilmah", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWAHmjWXVPuFwaiI0xXSKWjHBMZXrQnj0vbQ&s" },
+        { name: "iDealz", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdYr9VvL4rvQgel3dwRTQ2VIfPi9M3Q0njhg&s" }
       ]
     },
     {
-      tier: "Silver",
+      tier: "Media",
       sponsors: [
-        { name: "GameStore", logo: "https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg" },
-        { name: "TechStart", logo: "https://images.pexels.com/photos/1720229/pexels-photo-1720229.jpeg" },
-        { name: "ProGaming", logo: "https://images.pexels.com/photos/275033/pexels-photo-275033.jpeg" },
-        { name: "StreamTech", logo: "https://images.pexels.com/photos/194511/pexels-photo-194511.jpeg" }
+        { name: "Maniya Streams", logo: "https://yt3.googleusercontent.com/ytc/AIdro_m6AQo6Uduqs_MGlYhZmcMVWrHuyV_-DB2171q6fQrDCSI=s900-c-k-c0x00ffffff-no-rj", url: "https://www.youtube.com/@ManiyaStreams" },
+        { name: "Lion Kolla", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz1xwNgNPRv6KRmVNG6lcRNpq82zm4BNFuJA&s", url: "https://www.youtube.com/@LionKolla" },
+        { name: "COC Sinhalen", logo: "https://yt3.googleusercontent.com/lSwPImFGq_Yh-7FuFGaf3uJ4Koh6tsQK-szX9OYvHb5_5zmxHPTU-es0hkA-L0Vtkbee68Imqw=s900-c-k-c0x00ffffff-no-rj", url: "https://www.youtube.com/@COCSinhalen" },
+        { name: "Hashano_G", logo: "https://yt3.googleusercontent.com/fRRHqVSlsZVJHQKRIXZOtMGoWtmyghkthTXekqUhEVrZsklDu_qiqt4f4OyaqvFpYXnaeDcN6g=s900-c-k-c0x00ffffff-no-rj", url: "https://www.youtube.com/@HashanoG" }
       ]
     }
   ];
@@ -37,14 +38,14 @@ const Sponsors = () => {
           <h2 className="subsection-title">Featured Partners</h2>
           <div className="featured-sponsor-grid">
             <Card className="featured-sponsor">
-              <img src="https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg" alt="TechGiant Corp" />
-              <h3>TechGiant Corp</h3>
-              <p>Leading technology innovation in gaming hardware and software solutions.</p>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeVfGv5Ln3_Lhc1ox4d_xMdEiEq6pLVZyeXQ&s" alt="TechGiant Corp" />
+              <h3>Sri Lanka Institute of Information Technology - SLIIT</h3>
+              <p>Leading University for Private Sector</p>
             </Card>
             <Card className="featured-sponsor">
-              <img src="https://images.pexels.com/photos/159868/computer-mouse-wireless-computer-silver-159868.jpeg" alt="Gaming Pro" />
-              <h3>Gaming Pro</h3>
-              <p>Professional gaming equipment and accessories for esports athletes.</p>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6afMku8Z-tFRG9s_9C7EvUm80lllyBrr33g&s" alt="Gaming Pro" />
+              <h3>Trace Expert City - Colombo</h3>
+              <p>The Leading profesional Technological city in heart of Colombo</p>
             </Card>
           </div>
         </section>
@@ -59,12 +60,19 @@ const Sponsors = () => {
               {tier.sponsors.map((sponsor, index) => (
                 <Card key={index} className="sponsor-card">
                   <img src={sponsor.logo} alt={sponsor.name} className="sponsor-logo" />
-                  <h4>{sponsor.name}</h4>
+                  <h4>
+                    {sponsor.name}{" "}
+                    {tier.tier === "Streamers" && sponsor.url && (
+                      <a href={sponsor.url} target="_blank" rel="noopener noreferrer">
+                        <FaYoutube className="youtube-icon"/>
+                      </a>
+                    )}
+                  </h4>
                 </Card>
               ))}
             </div>
           </section>
-        ))}
+        ))}   
 
         <section className="sponsorship-info">
           <Card className="sponsorship-cta">
